@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Jessa | Reading Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2e7d32;
+            --bright-green: #4caf50;
+            --mint: #e8f5e9;
+            --white: #ffffff;
+            --yellow: #fff176;
+            --orange: #ff9800;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--mint);
+            color: #333;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- SUPER ANIMATED HEADER --- */
+        header {
+            background: linear-gradient(135deg, #1b5e20 0%, #4caf50 100%);
+            color: white;
+            padding: 5rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 8px solid var(--yellow);
+        }
+
+        .floating-icons span {
+            position: absolute;
+            font-size: 2.5rem;
+            animation: float 6s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(20deg); }
+        }
+
+        header h1 { 
+            font-family: 'Fredoka', sans-serif; 
+            font-size: 4rem; 
+            text-shadow: 4px 4px 0px var(--primary-green);
+            animation: bounceIn 1s;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-green);
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+            background: var(--mint);
+        }
+
+        nav a:hover { background: var(--yellow); transform: scale(1.1); }
+
+        /* --- CONTENT CARDS --- */
+        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+
+        .card {
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 0px #c8e6c9;
+            border: 2px solid #a5d6a7;
+            position: relative;
+        }
+
+        h2 { font-family: 'Fredoka', sans-serif; color: var(--primary-green); margin-bottom: 20px; font-size: 2rem; border-bottom: 3px dashed var(--yellow); display: inline-block; }
+
+        .lesson-box {
+            background: var(--mint);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 15px 0;
+            border-left: 8px solid var(--bright-green);
+        }
+
+        /* --- QUIZ AREA --- */
+        .quiz-container {
+            background: #fff9c4;
+            padding: 30px;
+            border-radius: 30px;
+            border: 4px dashed var(--orange);
+        }
+
+        .btn {
+            background: var(--bright-green);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-family: 'Fredoka', sans-serif;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin: 10px 5px;
+            box-shadow: 0 4px 0 var(--primary-green);
+            transition: 0.2s;
+        }
+
+        .btn:active { transform: translateY(4px); box-shadow: none; }
+        .btn-wrong { background: #ff5252; box-shadow: 0 4px 0 #b71c1c; }
+
+        footer { text-align: center; padding: 50px; background: var(--primary-green); color: white; margin-top: 40px; }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="floating-icons">
+        <span style="top:10%; left:10%">🌟</span>
+        <span style="top:20%; right:15%">📚</span>
+        <span style="top:70%; left:20%">🍏</span>
+        <span style="top:60%; right:10%">🎨</span>
+    </div>
+    <h1>Teacher Jessa</h1>
+    <p>🌈 Let's Explore Reading & Writing Together!</p >
+</header>
+
+<nav>
+    <a href=" ">🔤 ABCs</a >
+    <a href="#grammar">🧩 Word Types</a >
+    <a href="#spelling">✨ Spelling</a >
+    <a href="#reading">📖 Stories</a >
+    <a href="#quiz">🧠 Quiz Time!</a >
+</nav>
+
+<div class="container">
+
+    <section id="alphabet" class="card">
+        <h2>🔤 Writing & Punctuation</h2>
+        <div class="lesson-box">
+            <p><strong>Spacing:</strong> Always leave a <span style="background: var(--yellow); padding: 2px 5px;">clear space</span> between your words. Don't let them squish together!</p >
+            <p><strong>Size:</strong> Try to keep all your letters the <strong>same size</strong> so they look like a team.</p >
+        </div>
+        <div class="lesson-box">
+            <h3>🛑 The Punctuation Police</h3>
+            <p>• <strong>Full Stop (.):</strong> Take 2 big breaths.</p >
+            <p>• <strong>Comma (,):</strong> Take a tiny pause.</p >
+            <p>• <strong>Capital Letters:</strong> Use them for Names, Places, and the start of a sentence!</p >
+        </div>
+    </section>
+
+    <section id="grammar" class="card">
+        <h2>🧩 The Word Puzzle</h2>
+        <p>Words have special jobs! Let's learn them:</p >
+        <div class="lesson-box" style="border-color: #2196f3;">
+            <p>👤 <strong>Nouns:</strong> Naming words (Dog, Australia, Teacher Jessa).</p >
+            <p>🏃 <strong>Verbs:</strong> Action words (Jump, Think, Write).</p >
+            <p>🎨 <strong>Adjectives:</strong> Describing words (The <b>big</b> green frog).</p >
+            <p>🚀 <strong>Adverbs:</strong> How you do things (Running <b>quickly</b>).</p >
+        </div>
+    </section>
+
+    <section id="spelling" class="card">
+        <h2>✨ Spelling Secrets</h2>
+        <div class="lesson-box" style="border-color: var(--orange);">
+            <p><strong>Prefixes (Starts):</strong> Adding 'un-' makes a word opposite (un-happy).</p >
+            <p><strong>Suffixes (Ends):</strong> Adding '-less' means without (flavour-less).</p >
+            <p><strong>Homonyms:</strong> Words that sound the same! 
+                <br>• <b>Hear</b> (with your ear) vs <b>Here</b> (this place).</p >
+        </div>
+    </section>
+
+    <section id="reading" class="card">
+        <h2>📖 Story Adventure</h2>
+        <div class="lesson-box">
+            <h3>🐕 Jared's Dog</h3>
+            <p>Jared walks to a park on the corner of <strong>High Street and Hall Street</strong>. His dog is friendly and loves people!</p >
+        </div>
+        <div class="lesson-box">
+            <h3>🌊 Brenda's Office</h3>
+            <p>Brenda is a <strong>newspaper reporter</strong>. She looks at the <strong>ocean</strong> to relax, but she has to finish her stories before the <strong>deadline</strong> (due date)!</p >
+        </div>
+    </section>
+
+    <section id="quiz" class="card quiz-container">
+        <h2>🧠 Brain Power Challenge!</h2>
+        
+        <div class="quiz-question">
+            <p><strong>1. What does a Suffix do?</strong></p >
+            <button class="btn" onclick="alert('Correct! It goes at the end.')">Joins the END of a word</button>
+            <button class="btn btn-wrong" onclick="alert('Oops! That is a Prefix.')">Joins the START</button>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>2. Which one is a Verb (Action)?</strong></p >
+            <button class="btn btn-wrong" onclick="alert('That is a Noun!')">Apple</button>
+            <button class="btn" onclick="alert('Great! Jumping is an action.')">Jumping</button>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>3. Where does Brenda work?</strong></p >
+            <button class="btn" onclick="alert('Yes! She is a newspaper reporter.')">Newspaper Office</button>
+            <button class="btn btn-wrong" onclick="alert('Not quite, she writes for newspapers!')">TV Station</button>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>🌟 High Five! You finished today's lessons! 🌟</p >
+    <p>Teacher Jessa's Digital Classroom</p >
+</footer>
+
+</body>
+</html>
